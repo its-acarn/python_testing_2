@@ -8,4 +8,5 @@ class Pub:
     def add_drink_to_pub(self, new_drink):
         self.drinks.append(new_drink)
 
-    
+    def add_money_to_till(self, drink_price):
+        self.till += drink_price
