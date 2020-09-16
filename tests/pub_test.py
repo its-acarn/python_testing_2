@@ -33,3 +33,10 @@ class TestPub(unittest.TestCase):
         self.pub.remove_drink_from_pub(self.drink_1)
         self.assertEqual(1, len(self.pub.drinks))
     
+    def test_sell_drink(self):
+        self.pub.add_drink_to_pub(self.drink_1)
+        self.pub.add_drink_to_pub(self.drink_2)
+        self.pub.sell_drink(self.drink_1, self.drink_1.price)
+        self.assertEqual(1, len(self.pub.drinks))
+        self.assertEqual(103.40, self.pub.till)
+        
