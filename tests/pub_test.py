@@ -26,3 +26,5 @@ class TestPub(unittest.TestCase):
     def test_add_money_to_till(self):
         self.pub.add_money_to_till(self.drink_2.price)
         self.assertEqual(107.50, self.pub.till)
+
+    
