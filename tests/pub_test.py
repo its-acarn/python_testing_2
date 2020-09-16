@@ -27,4 +27,9 @@ class TestPub(unittest.TestCase):
         self.pub.add_money_to_till(self.drink_2.price)
         self.assertEqual(107.50, self.pub.till)
 
+    def test_remove_drink_from_pub(self):
+        self.pub.add_drink_to_pub(self.drink_1)
+        self.pub.add_drink_to_pub(self.drink_2)
+        self.pub.remove_drink_from_pub(self.drink_1)
+        self.assertEqual(1, len(self.pub.drinks))
     

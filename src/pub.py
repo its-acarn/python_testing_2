@@ -10,3 +10,6 @@ class Pub:
 
     def add_money_to_till(self, drink_price):
         self.till += drink_price
+
+    def remove_drink_from_pub(self, drink_to_remove):
+        self.drinks.remove(drink_to_remove)
