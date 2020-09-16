@@ -15,6 +15,9 @@ class TestCustomer(unittest.TestCase):
     def test_customer_has_money_in_wallet(self):
         self.assertEqual(100.00, self.customer.wallet)
 
+    def test_customer_has_empty_drink_list(self):
+        self.assertEqual(0, len(self.customer.drinks))
+
     def test_remove_money_from_wallet(self):
         self.customer.remove_money_from_wallet(self.drink_1.price)
         self.assertEqual(96.60, self.customer.wallet)
