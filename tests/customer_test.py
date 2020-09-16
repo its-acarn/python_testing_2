@@ -25,3 +25,8 @@ class TestCustomer(unittest.TestCase):
     def test_add_drink_to_customer(self):
         self.customer.add_drink_to_customer(self.drink_1)
         self.assertEqual(1, len(self.customer.customer_drinks))
+
+    def test_buy_drink(self):
+        self.customer.buy_drink(self.drink_2, self.drink_2.price)
+        self.assertEqual(1, len(self.customer.customer_drinks))
+        self.assertEqual(92.50, self.customer.wallet)

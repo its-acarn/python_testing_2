@@ -15,4 +15,5 @@ class Pub:
         self.drinks.remove(drink_to_remove)
 
     def sell_drink(self, drink_to_sell):
-        pass
+        self.remove_drink_from_pub(drink_to_sell)
+        self.add_money_to_till(drink_to_sell)
