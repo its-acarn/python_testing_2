@@ -9,4 +9,5 @@ class TestCustomer(unittest.TestCase):
     def test_customer_has_a_name(self):
         self.assertEqual("Harrison", self.customer.name)
 
-    
+    def test_customer_has_money_in_wallet(self):
+        self.assertEqual(100.00, self.customer.wallet)
