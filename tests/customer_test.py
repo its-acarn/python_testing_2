@@ -5,12 +5,15 @@ from src.drink import Drink
 class TestCustomer(unittest.TestCase):
 
     def setUp(self):
-        self.customer = Customer("Harrison", 100.00)
+        self.customer = Customer("Harrison", 22, 100.00)
         self.drink_1 = Drink("Tennents", 3.40)
         self.drink_2 = Drink("Wine", 7.50)
 
     def test_customer_has_a_name(self):
         self.assertEqual("Harrison", self.customer.name)
+
+    def test_customer_has_age(self):
+        self.assertEqual(22, self.customer.age)
 
     def test_customer_has_money_in_wallet(self):
         self.assertEqual(100.00, self.customer.wallet)
