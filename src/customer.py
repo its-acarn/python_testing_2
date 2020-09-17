@@ -5,6 +5,7 @@ class Customer():
         self.age = age
         self.wallet = wallet
         self.customer_drinks = []
+        self.drunkenness = 0
 
     def remove_money_from_wallet(self, drink_price):
         self.wallet -= drink_price
