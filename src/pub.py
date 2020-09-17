@@ -17,3 +17,9 @@ class Pub:
     def sell_drink(self, drink_to_sell, drink_price):
         self.remove_drink_from_pub(drink_to_sell)
         self.add_money_to_till(drink_price)
+
+    def age_check(self, age):
+        if age >= 18:
+            return "OK to serve"
+        else:
+            return "Too young"
