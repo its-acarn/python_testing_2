@@ -7,8 +7,8 @@ class TestPub(unittest.TestCase):
     
     def setUp(self):
         self.pub = Pub("Duke's Corner", 100.00)
-        self.drink_1 = Drink("Tennents", 3.40)
-        self.drink_2 = Drink("Wine", 7.50)
+        self.drink_1 = Drink("Tennents", 3.40, 3.5)
+        self.drink_2 = Drink("Wine", 7.50, 12)
         self.customer_1 = Customer("Harrison", 22, 10.00)
 
         self.pub.add_drink_to_pub(self.drink_1)
